@@ -23,16 +23,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/booking', function () {
-    return view('booking');
-});
+Route::get('/booking',[BookingController::class, 'getSelfBookings'])->name('self.bookings');
 
 Route::get('/admin/admin-booking', function () {
      $data = Booking::all();
     return view('admin-booking', ['data' => $data]);
-    
-
-
 
 });
 

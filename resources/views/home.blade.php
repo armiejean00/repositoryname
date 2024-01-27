@@ -100,7 +100,11 @@
 
     
     <label for="desk_number" style="margin-left:40px">Desk Number:</label>
-    <input type="text" name="desk_number" id="desk_number" required style="height:40px">
+    <select name="desk_number" id="desk_number">
+        @foreach ($desks as $desk)
+            <option value="{{$desk->desk_number}}">{{$desk->desk_number}}</option>
+        @endforeach
+    </select>
     
     <button type="submit" style="background-color:darkblue;cursor:pointer;color:white;font-size:20px;border-radius:5px;margin-left:50px;padding:10px 20px">Book</button>
 
