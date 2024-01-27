@@ -5,6 +5,8 @@ use App\Http\Controllers\DeskController;
 
 use App\Http\Controllers\UserController;
 
+use App\Http\Controllers\BookingController;
+use App\Models\Booking;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +28,12 @@ Route::get('/booking', function () {
 });
 
 Route::get('/admin/admin-booking', function () {
-    return view('admin-booking');
+     $data = Booking::all();
+    return view('admin-booking', ['data' => $data]);
+    
+
+
+
 });
 
 Route::get('/admin/admin-officemap', function () {
@@ -62,3 +69,35 @@ Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'adminHom
 
 
 Route::get('user/{id}',[UserController::class,'update']);
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+})->name('welcome');
+
+Route::post('/home', function (\Illuminate\Http\Request $request) {
+    $floor = $request->input('floor');
+    $validFloors = ['floor1', 'floor2', 'floor3'];
+    if (in_array($floor, $validFloors)) {
+        return view('home', ['image' => $floor.'.png']);
+    } else {
+        return view('home', ['image' => null]);
+    }
+});
+
+
+Route::post('/update-data', 'DataController@update')->name('updateData');
+
+
+
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+
+Route::get('/bookings', [BookingController::class, 'index']);
+
+// Route::get('/desks', [App\Http\Controllers\DeskController::class, 'indexes']);
+
+// Route::get('/data', function () {
+//     $data = Booking::all();
+//     return view('data', ['data' => $data]);
+// });

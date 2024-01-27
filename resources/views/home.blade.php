@@ -89,86 +89,101 @@
         <!-- MAIN -->
         <main>
            <p style="font-size:25px">Good Day! {{ Auth::user()->firstname }}, Book your Desk Now</p>
-            
-           
+            <br>
+
+
+
+
+
+
+            <form method="POST" action="{{ route('bookings.store') }}">
+    @csrf
+    <label for="date" style="margin-left:40px">Date:</label>
+   <input type="date" name="date" id="date" required style="height:40px">
+
+    
+    <label for="desk_number" style="margin-left:40px">Desk Number:</label>
+    <input type="number" name="desk_number" id="desk_number" required style="height:40px">
+    
+    <button type="submit" style="background-color:darkblue;cursor:pointer;color:white;font-size:20px;border-radius:5px;margin-left:200px;padding:10px 20px">Book</button>
+
+
+</form>
+<br>
+ <div>
+        @if(session()->has('success'))
+        <div style="color:white;background-color:#7EE27C;width:250px;padding:10px;border-radius:20px">
+            {{session('success')}}
+        </div>
+
+        @endif
+    </div>
+    <div>
+        @if(session()->has('error'))
+        <div style="color:white;background-color:#FF4848;width:250px;padding:10px;border-radius:20px">
+            {{session('error')}}
+        </div>
+
+        @endif
+    </div>
+    <div>
+        @if(session()->has('errors'))
+        <div style="color:white;background-color:#FF4848;width:250px;padding:10px;border-radius:20px">
+            {{session('errors')}}
+        </div>
+
+        @endif
+    </div>
+
+    <div>
+        @if(session()->has('error0'))
+        <div style="color:white;background-color:#FF4848;width:250px;padding:10px;border-radius:20px">
+            {{session('error0')}}
+        </div>
+
+        @endif
+    </div>
+
+
+
+
+
+
+
+
+
 
             <div class="table-data">
+                
                 <div class="order">
                     <div class="head">
-                        <h3>Calendar</h3>
+                     
+ 
+<div>
 
-                    </div>
-                    
-                  
-                </div>
-
-                <div class="todo">
-                    <div class="head">
-                        <h3>Available Desk</h3>
-
-
-                    </div>
-                    <p style="color: green;font-size: 12px;">available</p>
-                    <p style="color: red;font-size: 12px;">not-available</p>
-                    <ul class="todo-list">
+    <br>
+<div style="display:flex">
+<img src="{{ asset('assets/img/floor1.png') }}" alt="" style="height:380px"> 
+   
+    <img src="{{ asset('assets/img/floor2.png') }}" alt="" style="height:380px">
+</div>
+<div style="display:flex">
+       
+<img src="{{ asset('assets/img/floor3.png') }}" alt="" style="height:380px">
+ <img src="{{ asset('assets/img/floor4.png') }}" alt="" style="height:380px">
+</div>
 
 
-                        <li class="completed">
-                            <p>Office 1</p>
 
-                            <p style="color: red;">1</p>
-                            <p style="color: green;">2</p>
-                            <p style="color: green;">3</p>
-                            <p style="color: red;">4</p>
-                        </li>
-                        <li class="completed">
-                            <p>Office 2</p>
-                            <p style="color: red;">5</p>
-                            <p style="color: green;">6</p>
-                            <p style="color: green;">7</p>
-                            <p style="color: red;">8</p>
 
-                        </li>
-                        <li class="completed">
-                            <p>Office 3</p>
-                            <p style="color: red;">9</p>
-                            <p style="color: red;">10</p>
-                            <p style="color: green;">11</p>
-                            <p style="color: red;">12</p>
+</div>
 
-                        </li>
-                        <li class="completed">
-                            <p>Office 4</p>
-                            <p style="color: red;">13</p>
-                            <p style="color: green;">14</p>
-                            <p style="color: green;">15</p>
-                            <p style="color: red;">16</p>
-                            <p style="color: green;">17</p>
-                            <p style="color: red;">18</p>
 
-                        </li>
-                        <li class="completed">
-                            <p>Office 5</p>
-                            <p style="color: green;">19</p>
-                            <p style="color: green;">20</p>
-                            <p style="color: green;">21</p>
-                            <p style="color: red;">22</p>
-                            <p style="color: green;">23</p>
-                            <p style="color: red;">24</p>
 
-                        </li>
-                        <li class="completed">
-                            <p>Office 6</p>
-                            <p style="color: green;">25</p>
-                            <p style="color: green;">26</p>
-                            <p style="color: green;">27</p>
-                            <p style="color: red;">28</p>
+                
 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-          
+                
+               
         </main>
         <!-- MAIN -->
     </section>
@@ -176,6 +191,22 @@
 
 
    <script src="{{asset('assets/js/homepage.js')}}"></script>
+   <script>
+    // Get the current date
+    var today = new Date().toISOString().split('T')[0];
+
+    // Set the minimum selectable date to the current date
+    document.getElementById("date").min = today;
+
+    // Calculate the next two days
+    var nextDay = new Date();
+    nextDay.setDate(nextDay.getDate() + 14);
+    var nextTwoDays = nextDay.toISOString().split('T')[0];
+
+    // Set the maximum selectable date to the next two days
+    document.getElementById("date").max = nextTwoDays;
+</script>
+
 </body>
 
 </html>
