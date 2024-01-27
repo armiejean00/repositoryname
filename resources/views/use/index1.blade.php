@@ -105,7 +105,7 @@
         <!-- MAIN -->
         <main>
 
-    <h1>Users</h1>
+    <h1>Manage Users</h1>
 <br>
      <div>
         <a href="{{route('use.create')}}" style="background-color:darkblue;color:white;padding:5px;border-radius:5px">Add User</a>

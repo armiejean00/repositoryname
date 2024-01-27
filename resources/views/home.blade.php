@@ -93,19 +93,16 @@
 
 
 
-
-
-
-            <form method="POST" action="{{ route('bookings.store') }}">
+    <form method="POST" action="{{ route('bookings.store') }}">
     @csrf
     <label for="date" style="margin-left:40px">Date:</label>
    <input type="date" name="date" id="date" required style="height:40px">
 
     
     <label for="desk_number" style="margin-left:40px">Desk Number:</label>
-    <input type="number" name="desk_number" id="desk_number" required style="height:40px">
+    <input type="text" name="desk_number" id="desk_number" required style="height:40px">
     
-    <button type="submit" style="background-color:darkblue;cursor:pointer;color:white;font-size:20px;border-radius:5px;margin-left:200px;padding:10px 20px">Book</button>
+    <button type="submit" style="background-color:darkblue;cursor:pointer;color:white;font-size:20px;border-radius:5px;margin-left:50px;padding:10px 20px">Book</button>
 
 
 </form>
