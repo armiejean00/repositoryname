@@ -105,7 +105,7 @@
         <!-- MAIN -->
      <div>
     @if($errors->any())
-    <ul style="color: red;">
+    <ul style="color:white;background-color:#FF4848;width:250px;padding:10px;border-radius:20px;margin-top:20px;margin-left:10px">
         @foreach($errors->all() as $error)
         <li>{{$error}}</li>
         @endforeach
@@ -119,7 +119,8 @@
 
     <div style="margin-bottom: 40px;">
         
-        <input type="integer" name="desk_number" placeholder="Enter Desk Number" style="padding: 5px; border-radius: 5px;width:150px;height:50px;margin-top:50px;margin-left:25px">
+        <input type="integer" name="desk_number" placeholder="Enter Desk Number" style="padding: 5px; border-radius: 5px;width:150px;height:50px;margin-top:50px;margin-left:25px" max="50">
+
     </div>
 
     <div>

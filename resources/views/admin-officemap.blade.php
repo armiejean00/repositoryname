@@ -104,184 +104,66 @@
 
         <!-- MAIN -->
         <main>
-           <p style="font-size:25px">Good Day! {{ Auth::user()->firstname }}</p>
-            
-            <ul class="box-info">
-                <li>
-                    <i class='bx bxs-calendar-check'></i>
-                    <span class="text">
-                        <h3>100</h3>
-                        <p>Total Bookings</p>
-                    </span>
-                </li>
-                <li>
-                    <i class='bx bxs-group'></i>
-                    <span class="text">
-                        <h3>284</h3>
-                        <p>Users</p>
-                    </span>
-                </li>
+          
 
-            </ul>
-
-            <div class="table-data">
+         <div class="table-data">
+                
                 <div class="order">
                     <div class="head">
-                        <h3>Calendar</h3>
+                     
+ 
+<div>
 
-                    </div>
-                    
-                    <!-- <table>
-			<thead>
-				<tr>
-					<th>User</th>
-					<th>Date </th>
-					<th>Status</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<img src="img/people.png">
-						<p>John Doe</p>
-					</td>
-					<td>01-10-2021</td>
-					<td><span class="status completed">Completed</span></td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/people.png">
-						<p>John Doe</p>
-					</td>
-					<td>01-10-2021</td>
-					<td><span class="status completed">Completed</span></td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/people.png">
-						<p>John Doe</p>
-					</td>
-					<td>01-10-2021</td>
-					<td><span class="status completed">Completed</span></td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/people.png">
-						<p>John Doe</p>
-					</td>
-					<td>01-10-2021</td>
-					<td><span class="status cancelled">Cancelled</span></td>
-				</tr>
-				<tr>
-					<td>
-						<img src="img/people.png">
-						<p>John Doe</p>
-					</td>
-					<td>01-10-2021</td>
-					<td><span class="status completed">Completed</span></td>
-				</tr>
-			</tbody>
-		</table> -->
-                </div>
-
-                <div class="todo">
-                    <div class="head">
-                        <h3>Available Desk</h3>
+    <br>
+<div style="display:flex">
+<img src="{{ asset('assets/img/floor1.png') }}" alt="" style="height:380px"> 
+   
+    <img src="{{ asset('assets/img/floor2.png') }}" alt="" style="height:380px">
+</div>
+<div style="display:flex">
+       
+<img src="{{ asset('assets/img/floor3.png') }}" alt="" style="height:380px">
+ <img src="{{ asset('assets/img/floor4.png') }}" alt="" style="height:380px">
+</div>
 
 
-                    </div>
-                    <p style="color: green;font-size: 12px;">available</p>
-                    <p style="color: red;font-size: 12px;">not-available</p>
-                    <ul class="todo-list">
 
 
-                        <li class="completed">
-                            <p>Office 1</p>
-
-                            <p style="color: red;">1A</p>
-                            <p style="color: green;">1B</p>
-                            <p style="color: green;">1C</p>
-                            <p style="color: red;">1D</p>
-                        </li>
-                        <li class="completed">
-                            <p>Office 2</p>
-                            <p style="color: red;">2A</p>
-                            <p style="color: green;">2B</p>
-                            <p style="color: green;">2C</p>
-                            <p style="color: red;">2D</p>
-
-                        </li>
-                        <li class="completed">
-                            <p>Office 3</p>
-                            <p style="color: red;">3A</p>
-                            <p style="color: red;">3B</p>
-                            <p style="color: green;">3C</p>
-                            <p style="color: red;">3D</p>
-
-                        </li>
-                        <li class="completed">
-                            <p>Office 4</p>
-                            <p style="color: red;">4A</p>
-                            <p style="color: green;">4B</p>
-                            <p style="color: green;">4C</p>
-                            <p style="color: red;">4D</p>
-                            <p style="color: green;">4E</p>
-                            <p style="color: red;">4F</p>
-
-                        </li>
-                        <li class="completed">
-                            <p>Office 5</p>
-                            <p style="color: green;">5A</p>
-                            <p style="color: green;">5B</p>
-                            <p style="color: green;">5C</p>
-                            <p style="color: red;">5D</p>
-                            <p style="color: green;">5E</p>
-                            <p style="color: red;">5F</p>
-
-                        </li>
-                        <li class="completed">
-                            <p>Office 6</p>
-                            <p style="color: green;">6A</p>
-                            <p style="color: green;">6B</p>
-                            <p style="color: green;">6C</p>
-                            <p style="color: red;">6D</p>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
+</div>
 
 
-            <div class="table-data">
-                <div class="order">
-                    <div class="head">
-                        <h3>Recent Bookings</h3>
 
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>User</th>
-                                <th>Date </th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <img src="./img/Alex Gonley.jpg">
-                                    <p>John Doe</p>
-                                </td>
-                                <td>01-10-2021</td>
-                                <td><span class="status completed">Completed</span></td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
+                
 
+                
                
-            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+
+ 
+   <script>
+    <script>
+    document.querySelector('#date_input').addEventListener('change', function() {
+        var selectedDate = this.value;
+        fetch('/update-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({ date: selectedDate })
+        })
+        .then(function(response) {
+            // Handle the response and update the relevant data on the page
+        });
+    });
+</script>
+
+    
+   </script>
         </main>
         <!-- MAIN -->
     </section>

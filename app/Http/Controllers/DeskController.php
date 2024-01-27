@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Desk;
+use Illuminate\Validation\Rule;
 
 class DeskController extends Controller
 {
@@ -18,13 +19,17 @@ class DeskController extends Controller
     }
 
     public function store(Request $request){
-       $data = $request->validate([
-        
-        'desk_number'=>'required|integer',
-      
-       ]);
+       $request->validate([
+        'desk_number' => [
+            'required',
+            'integer',
+            'min:1',
+            'max:50',
+            Rule::unique(Desk::class, 'desk_number'),
+        ],
+    ]);
 
-       $newDesk = Desk::create($data);
+      $newDesk = Desk::create($request->all());
 
        return redirect(route('desks.index'));
     }
@@ -39,6 +44,8 @@ class DeskController extends Controller
         'desk_number'=>'required|integer',
       
        ]);
+
+       
 
        $desks->update($data);
        return redirect(route('desks.index'))->with('success','Desk Updated');

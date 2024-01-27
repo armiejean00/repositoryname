@@ -16,4 +16,8 @@ class Desk extends Model
         'isAvailable'
 
     ];
+
+   protected $table = 'desks';
+
+     
 }

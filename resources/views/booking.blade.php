@@ -95,7 +95,7 @@
             <div class="table-data">
                 <div class="order">
                     <div class="head">
-                        <h3>Calendar</h3>
+                        <h3>My Booking</h3>
 
                     </div>
                     

@@ -138,22 +138,20 @@
             <th>Action</th>
         </tr>
 
-        @foreach($desks as $desk)
-        <tr>
-          
-            <td>Desk {{$desk->desk_number}}</td>
-            <td style="color:{{$desk->isAvailable ? 'green' : 'red'}}">{{$desk->isAvailable ? 'Available' : 'Unavailable'}}</td>
-
-            
-<td>
-    <form method="post" action="{{ route('desks.destroy', ['desks'=>$desk]) }}">
-        @csrf
-        @method('delete')
-        <input type="submit" value="Delete" style="background-color: #ef7364; color: #fff; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;"/>
-    </form>
-</td>
-        </tr>
+      @foreach($desks->sortBy('desk_number') as $desk)
+    <tr>
+        <td>Desk {{$desk->desk_number}}</td>
+        <td style="color:{{$desk->isAvailable ? 'green' : 'red'}}">{{$desk->isAvailable ? 'Available' : 'Booked'}}</td>
+        <td>
+            <form method="post" action="{{ route('desks.destroy', ['desks'=>$desk]) }}">
+                @csrf
+                @method('delete')
+                <input type="submit" value="Delete" style="background-color: #ef7364; color: #fff; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;"/>
+            </form>
+        </td>
+    </tr>
 @endforeach
+
 
     </table>
 
