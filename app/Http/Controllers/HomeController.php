@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Desk;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -30,7 +31,8 @@ class HomeController extends Controller
     {
         $users = User::all();
         $admins = User::where('is_admin', 1)->get(); 
+        $desks = Desk::all();
 
-        return view('admin-home')->with('data', ['users' => $users, 'admins' => $admins]);
+        return view('admin-home')->with('data', ['users' => $users, 'admins' => $admins, 'desks' => $desks]);
     }
 }

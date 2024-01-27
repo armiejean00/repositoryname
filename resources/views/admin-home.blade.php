@@ -124,7 +124,7 @@
                 <li>
                     <i class='bx bx-table'></i>
                     <span class="text">
-                        <h3>284</h3>
+                        <h3>{{$data['desks']->count()}}</h3>
                         <p>Total Desks</p>
                     </span>
                 </li>
