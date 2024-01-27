@@ -19,6 +19,12 @@ class BookingController extends Controller
     return view('bookings.index', compact('bookings'));
 }
 
+public function getSelfBookings () {
+    $self_bookings = Booking::all()->where('user_id', auth()->id());
+
+    return view('booking')->with('bookings', $self_bookings);
+}
+
 
 public function store(Request $request)
 {

@@ -96,7 +96,11 @@
                 <div class="order">
                     <div class="head">
                         <h3>My Booking</h3>
-
+                        <ul>
+                            @foreach ($bookings as $booking)
+                                <li>{{$booking}}</li>
+                            @endforeach
+                        </ul>
                     </div>
                     
                   
