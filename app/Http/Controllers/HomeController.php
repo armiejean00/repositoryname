@@ -25,7 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $desks = Desk::all();
+
+        return view('home')->with('desks', $desks);
     }
     public function adminHome()
     {
