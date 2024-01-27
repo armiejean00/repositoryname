@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,9 +26,11 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function adminHome(){
+    public function adminHome()
+    {
+        $users = User::all();
+        $admins = User::where('is_admin', 1)->get(); 
 
-        
-        return view('admin-home');
+        return view('admin-home')->with('data', ['users' => $users, 'admins' => $admins]);
     }
 }

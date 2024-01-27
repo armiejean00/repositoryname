@@ -110,21 +110,21 @@
                <li>
                     <i class='bx bxs-group'></i>
                     <span class="text">
-                        <h3>284</h3>
+                        <h3>{{$data['users']->count()}}</h3>
                         <p>Total Users</p>
                     </span>
                 </li>
                 <li>
                     <i class='bx bxs-group'></i>
                     <span class="text">
-                        <h3>284</h3>
+                        <h3>{{$data['admins']->count()}}</h3>
                         <p>Total Admin</p>
                     </span>
                 </li>
                 <li>
                     <i class='bx bxs-group'></i>
                     <span class="text">
-                        <h3>284</h3>
+                        <h3>{{$data['users']->count()}}</h3>
                         <p>Users</p>
                     </span>
                 </li>
