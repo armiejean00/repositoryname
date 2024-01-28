@@ -42,6 +42,12 @@
                 <span class="text">Booking</span>
             </a>
         </li>
+         <li>
+            <a href="user-profile">
+                <i class='bx bxs-user'></i>
+                <span class="text">Profile</span>
+            </a>
+        </li>
        
        
 
@@ -91,16 +97,50 @@
           
             
            
-
+  <h1>My Booking</h1>
             <div class="table-data">
                 <div class="order">
                     <div class="head">
-                        <h3>My Booking</h3>
-                        <ul>
-                            @foreach ($bookings as $booking)
-                                <li>{{$booking}}</li>
-                            @endforeach
-                        </ul>
+                      
+                      
+                         
+                    
+
+                            <table>
+        <tr>
+           
+            <th>Date</th>
+            <th>Desk Number</th>
+            <th>Status</th>
+             <th>Action</th>
+          
+          
+            
+        </tr>
+
+      
+   @foreach ($bookings as $booking)
+
+        <tr>
+           
+            <td>{{$booking->date}}</td>
+            <td>Desk {{$booking->desk_number}}</td>
+          
+            <td style="color:{{$booking->status ? 'green' : 'red'}}">{{$booking->status ? 'Confirmed' : 'Cancelled'}}</td>
+
+ 
+    <td>
+        <form method="" action="">
+      
+        <input type="submit" value="Cancel" style="background-color: #ef7364; color: #fff; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;"/>
+    </form>
+    </td>
+        
+        </tr>
+@endforeach
+
+    </table>
+                       
                     </div>
                     
                   

@@ -24,7 +24,7 @@
             <li> <a href="#userguide">User Guide</a></li>
             <li> <a href="#customers">Our Team</a></li>
         </ul>
-        <div class="header-icon" style="background-color:#bc9667">
+        <div class="header-icon" style="background-color:#bc9667;border-radius:10px">
             <a href="{{ route('register') }}" style="font-size:15px;padding:5px;border-radius:10px">Get Started</a>
 
 
@@ -170,9 +170,9 @@ d. Then click "Book Now"
             <h3>Contact</h3>
             <div class="contact">
                 
-                <span><i class='bx bxs-phone'></i>+63162753920</span>
-                <span><i class='bx bxs-envelope'></i>aurorazafrabactol@student.laverdad.edu.ph</span>
-                <span><i class='bx bxs-envelope'></i>armiejeanmiranda@student.laverdad.edu.ph</span>
+                
+                <span><i class='bx bxs-envelope'></i>apexhubspot@gmail.com</span>
+             
 
             </div>
         </div>

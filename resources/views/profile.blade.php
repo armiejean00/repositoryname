@@ -42,8 +42,8 @@
                 <span class="text">Booking</span>
             </a>
         </li>
-        <li class="active">
-            <a href="#">
+        <li >
+            <a href="admin-officemap">
                 <i class='bx bxs-map'></i>
                 <span class="text">Office Map</span>
             </a>
@@ -61,8 +61,8 @@
                 <span class="text">Manage Desk</span>
             </a>
         </li>
-         <li>
-            <a href="profile">
+        <li class="active">
+            <a href="#">
                 <i class='bx bx-user'></i>
                 <span class="text">Profile</span>
             </a>
@@ -109,42 +109,47 @@
         <!-- NAVBAR -->
 
         <!-- MAIN -->
-        <main>
-           <h1>Office Map</h1>
+       <main>
+          
+            
+           
+  <!-- <h1>Profile</h1>
 
-         <div class="table-data">
+   <p style="font-size:35px">Good Day! {{ Auth::user()->firstname }}</p> -->
+
+
+   
+            
+            <div class="table-data">
 
         
-                
                 <div class="order">
+                    <div style="display:flex">
+                        <img src="{{asset('assets/img/dummy.png')}}" alt="" style="height:200px;border-radius:100px">
+<div style="margin-left:50px;margin-top:50px">
+<div style="display:flex;gap:10px">
+      <p style="font-size:40px">{{ Auth::user()->firstname }}</p>
+                      <p style="font-size:40px">{{ Auth::user()->lastname }}</p>
+</div>
+                       
+                       <p style="font-size:18px"> {{ Auth::user()->email }}</p>
+                       <p style="font-size:15px">{{ Auth::user()->is_admin ? 'Administrator' : 'Normal User' }}</p>
+                       </div>
+</div>
+              
                     <div class="head">
-                     
- 
-<div>
+                      
+                      
+                         
+                    
+                       
+                    </div>
+                    
+                  
+                </div>
 
-    <br>
-<div style="display:flex">
-<img src="{{ asset('assets/img/floor1.png') }}" alt="" style="height:380px"> 
-   
-    <img src="{{ asset('assets/img/floor2.png') }}" alt="" style="height:380px">
-</div>
-<div style="display:flex">
-       
-<img src="{{ asset('assets/img/floor3.png') }}" alt="" style="height:380px">
- <img src="{{ asset('assets/img/floor4.png') }}" alt="" style="height:380px">
-</div>
-
-
-
-
-</div>
-
-
-
-                
-
-                
-               
+            </div>
+          
         </main>
         <!-- MAIN -->
     </section>
@@ -152,26 +157,7 @@
 
 
  
-   <script>
-    <script>
-    document.querySelector('#date_input').addEventListener('change', function() {
-        var selectedDate = this.value;
-        fetch('/update-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
-            },
-            body: JSON.stringify({ date: selectedDate })
-        })
-        .then(function(response) {
-            // Handle the response and update the relevant data on the page
-        });
-    });
-</script>
-
-    
-   </script>
+  
         </main>
         <!-- MAIN -->
     </section>

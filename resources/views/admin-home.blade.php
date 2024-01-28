@@ -61,6 +61,12 @@
                 <span class="text">Manage Desk</span>
             </a>
         </li>
+         <li>
+            <a href="profile">
+                <i class='bx bx-user'></i>
+                <span class="text">Profile</span>
+            </a>
+        </li>
        
     </ul>
     <ul class="side-menu" style="margin-top:150px">
@@ -104,7 +110,7 @@
 
         <!-- MAIN -->
         <main>
-           <p style="font-size:25px">Good Day! {{ Auth::user()->firstname }}</p>
+           <p style="font-size:35px">Good Day! {{ Auth::user()->firstname }}  {{ Auth::user()->lastname }}</p>
             
             <ul class="box-info">
                <li>

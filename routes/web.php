@@ -40,6 +40,15 @@ Route::get('/admin/manage-user', function () {
 Route::get('/admin/manage-desk', function () {
     return view('manage-desk');
 });
+Route::get('/admin/profile', function () {
+    return view('profile');
+});
+
+Route::get('/user-profile', function () {
+    return view('user-profile');
+});
+
+
 
 Route::get('/desks',[DeskController::class,'index'])->name('desks.index');
 Route::get('/desks/create',[DeskController::class,'create'])->name('desks.create');
@@ -54,6 +63,11 @@ Route::get('/use',[UserController::class,'index1'])->name('use.index1');
 Route::get('/use/create',[UserController::class,'create'])->name('use.create');
 Route::post('/use',[UserController::class,'store'])->name('use.store');
 Route::delete('/use/{use}/destroy',[UserController::class,'destroy'])->name('use.destroy');
+
+
+Route::delete('/cancel/{booking}/destroy',[BookingController::class,'destroy'])->name('admin.destroy');
+
+
 
 
 Auth::routes();
@@ -96,3 +110,7 @@ Route::get('/bookings', [BookingController::class, 'index']);
 //     $data = Booking::all();
 //     return view('data', ['data' => $data]);
 // });
+
+
+Route::get('/',[DeskController::class,'index']);
+Route::get('desk/{id}',[DeskController::class,'update1']);

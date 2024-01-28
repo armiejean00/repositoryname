@@ -61,6 +61,12 @@
                 <span class="text">Manage Desk</span>
             </a>
         </li>
+         <li>
+            <a href="/admin/profile">
+                <i class='bx bx-user'></i>
+                <span class="text">Profile</span>
+            </a>
+        </li>
        
     </ul>
     <ul class="side-menu" style="margin-top:150px">
@@ -117,7 +123,7 @@
 <br>
  <div>
         @if(session()->has('success'))
-        <div style="color:green">
+        <div style="color:white;background-color:#7EE27C;width:250px;padding:10px;border-radius:20px">
             {{session('success')}}
         </div>
 
@@ -140,8 +146,22 @@
 
       @foreach($desks->sortBy('desk_number') as $desk)
     <tr>
+
+
         <td>Desk {{$desk->desk_number}}</td>
-        <td style="color:{{$desk->isAvailable ? 'green' : 'red'}}">{{$desk->isAvailable ? 'Available' : 'Booked'}}</td>
+
+
+
+
+       <td>
+        <a href="desk/{{$desk->id}}" style="color:white;font-size:14px;padding:5px;border-radius:5px;background-color:{{ $desk->isAvailable ? 'green' : 'red'}}">
+    {{$desk->isAvailable ? 'Available' : 'Disabled'}}
+    </a>
+       </td>
+
+
+
+
         <td>
             <form method="post" action="{{ route('desks.destroy', ['desks'=>$desk]) }}">
                 @csrf

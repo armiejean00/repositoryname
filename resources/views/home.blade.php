@@ -42,6 +42,12 @@
                 <span class="text">Booking</span>
             </a>
         </li>
+         <li>
+            <a href="user-profile">
+                <i class='bx bxs-user'></i>
+                <span class="text">Profile</span>
+            </a>
+        </li>
        
        
 
@@ -88,8 +94,12 @@
 
         <!-- MAIN -->
         <main>
-           <p style="font-size:25px">Good Day! {{ Auth::user()->firstname }}, Book your Desk Now</p>
+           <p style="font-size:35px">Good Day! {{ Auth::user()->firstname }}  {{ Auth::user()->lastname }}, Book your Desk Now</p>
             <br>
+            <br>
+            <br>
+          
+          
 
 
 
@@ -100,8 +110,8 @@
 
     
     <label for="desk_number" style="margin-left:40px">Desk Number:</label>
-    <select name="desk_number" id="desk_number">
-        @foreach ($desks as $desk)
+    <select name="desk_number" id="desk_number" style="height:40px;width:100px">
+        @foreach ($desks->sortBy('desk_number') as $desk)
             <option value="{{$desk->desk_number}}">{{$desk->desk_number}}</option>
         @endforeach
     </select>
@@ -206,6 +216,17 @@
 
     // Set the maximum selectable date to the next two days
     document.getElementById("date").max = nextTwoDays;
+
+
+
+
+
+
+
+
+
+
+   
 </script>
 
 </body>

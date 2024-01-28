@@ -61,6 +61,12 @@
                 <span class="text">Manage Desk</span>
             </a>
         </li>
+         <li>
+            <a href="/admin/profile">
+                <i class='bx bx-user'></i>
+                <span class="text">Profile</span>
+            </a>
+        </li>
       
     </ul>
     <ul class="side-menu" style="margin-top:150px">
@@ -113,12 +119,23 @@
 <br>
     <div>
         @if(session()->has('success'))
-        <div style="color:green">
+        <div style="color:white;background-color:#7EE27C;width:250px;padding:10px;border-radius:20px">
             {{session('success')}}
         </div>
 
         @endif
     </div>
+     <div>
+    @if($errors->any())
+    <ul style="color:white;background-color:#FF4848;width:250px;padding:10px;border-radius:20px;margin-top:20px;margin-left:10px">
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+    </ul>
+    @endif
+</div>
+
+    
 
 
     <div class="table-data">
@@ -130,10 +147,13 @@
 <table>
         <tr>
            
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Name</th>
+          
             <th>Email</th>
+
+  <th>Delegate Role</th>
             <th>UserType</th>
+
             <th>Status</th>
             <th>Action</th>
           
@@ -143,21 +163,46 @@
         @foreach($use as $u)
         <tr>
            
-            <td>{{$u->firstname}}</td>
-            <td>{{$u->lastname}}</td>
+            <td>{{$u->firstname}} {{$u->lastname}}</td>
+           
             <td>{{$u->email}}</td>
-            <td>{{$u->is_admin ? 'admin' : 'user'}}</td>
+
+
+
+          @if($u->is_admin)
+    <td>
+        <select style="height:30px">
+            <option>Office Manager</option>
+            <option>Financial Clerks</option>
+             <option>Administrative Assistant</option>
+             <option>Backend Developer</option>
+            <option>UI/UX Designer</option>
+             <option>Secretaries</option>
+        </select>
+    </td>
+@else
+    <td></td>
+@endif
+
+            
+            <td>{{$u->is_admin ? 'admin' : 'normal user'}}</td>
 
 
             <td>
                 <a href="user/{{$u->id}}" style="color:white;font-size:14px;padding:5px;border-radius:5px;background-color:{{ $u->status ? 'green' : 'red'}}">
-                    {{$u->status ? 'Active' : 'Banned'}}
+                    {{$u->status ? 'Active' : 'Disabled'}}
                     
                 </a>
             </td>
 
             
 
+
+
+@if($u->is_admin)
+   <td></td>
+@else
+   
             <td>
 
             <form method="post" action="{{route('use.destroy',['use'=>$u])}}">
@@ -166,6 +211,15 @@
         <input type="submit" value="Delete" style="background-color: #ef7364; color: #fff; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;"/>
     </form>
             </td>
+@endif
+
+
+
+
+
+
+
+            
         
         </tr>
 @endforeach
