@@ -61,6 +61,12 @@
                 <span class="text">Manage Desk</span>
             </a>
         </li>
+         <li>
+            <a href="profile">
+                <i class='bx bx-user'></i>
+                <span class="text">Profile</span>
+            </a>
+        </li>
       
     </ul>
     <ul class="side-menu" style="margin-top:150px">
@@ -135,16 +141,25 @@
                
                 <th>Desk Number</th>
                 <th>Status</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($data as $row)
+            @foreach($data->sortBy('date') as $row)
                 <tr>
                     <td>{{ $row->user_id }}</td>
                     <td>{{ $row->date }}</td>
                     
                     <td>Desk {{ $row->desk_number }}</td>
-                    <td style="color:{{ $row->status ? 'green' : 'blue'}};">{{ $row->status ? 'Accepted' : 'Finished' }}</td>
+                    <td style="color:{{ $row->status ? 'green' : 'blue'}};">{{ $row->status ? 'Accepted' : 'Cancelled' }}</td>
+
+
+                     <td>
+        <form method="" action="">
+      
+        <input type="submit" value="Cancel" style="background-color: #ef7364; color: #fff; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;"/>
+    </form>
+    </td>
                 </tr>
             @endforeach
         </tbody>

@@ -58,6 +58,27 @@ class DeskController extends Controller
     }
 
 
+    public function index1(){
+        $desks = Desk::all();
+        return view('desks.index',compact('desks'));
+    }
+
+    public function update1($deskId){
+        $desk = Desk::find($deskId);
+
+        if($desk){
+            if($desk->isAvailable){
+                $desk->isAvailable=0;
+            }
+            else{
+                $desk->isAvailable=1;
+            }
+            $desk->save();
+        }
+        return back();
+    }
+
+
 
     
 }

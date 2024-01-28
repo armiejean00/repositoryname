@@ -42,6 +42,12 @@
                 <span class="text">Booking</span>
             </a>
         </li>
+         <li>
+            <a href="user-profile">
+                <i class='bx bxs-user'></i>
+                <span class="text">Profile</span>
+            </a>
+        </li>
        
        
 
@@ -88,28 +94,29 @@
 
         <!-- MAIN -->
         <main>
-           <p style="font-size:25px">Good Day! {{ Auth::user()->firstname }}, Book your Desk Now</p>
+           <p style="font-size:35px">Good Day! {{ Auth::user()->firstname }}  {{ Auth::user()->lastname }}, Book your Desk Now</p>
             <br>
+            <br>
+            <br>
+          
+          
 
 
 
-
-
-
-            <form method="POST" action="{{ route('bookings.store') }}">
+    <form method="POST" action="{{ route('bookings.store') }}">
     @csrf
     <label for="date" style="margin-left:40px">Date:</label>
    <input type="date" name="date" id="date" required style="height:40px">
 
     
     <label for="desk_number" style="margin-left:40px">Desk Number:</label>
-    <select name="desk_number" id="desk_number">
-        @foreach ($desks as $desk)
+    <select name="desk_number" id="desk_number" style="height:40px;width:100px">
+        @foreach ($desks->sortBy('desk_number') as $desk)
             <option value="{{$desk->desk_number}}">{{$desk->desk_number}}</option>
         @endforeach
     </select>
     
-    <button type="submit" style="background-color:darkblue;cursor:pointer;color:white;font-size:20px;border-radius:5px;margin-left:200px;padding:10px 20px">Book</button>
+    <button type="submit" style="background-color:darkblue;cursor:pointer;color:white;font-size:20px;border-radius:5px;margin-left:50px;padding:10px 20px">Book</button>
 
 
 </form>
@@ -209,6 +216,17 @@
 
     // Set the maximum selectable date to the next two days
     document.getElementById("date").max = nextTwoDays;
+
+
+
+
+
+
+
+
+
+
+   
 </script>
 
 </body>

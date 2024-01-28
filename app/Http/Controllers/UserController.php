@@ -14,6 +14,7 @@ class UserController extends Controller
         return view('use.index1',['use'=>$use]);
     }
     
+    
      public function destroy(User $use){
         $use->delete();
         return redirect(route('use.index1'))->with('success','User Deleted!');

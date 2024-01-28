@@ -17,4 +17,10 @@ class DataController extends Controller
 
         return response()->json(['data' => $updatedData]);
     }
+
+
+    // public function index(){
+    //     $desks = Desk::all();
+    //     return view('desks.index',compact('desks'));
+    // }
 }

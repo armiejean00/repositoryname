@@ -32,44 +32,28 @@
     <ul class="side-menu top">
         <li>
             <a href="home">
-                <i class='bx bxs-dashboard'></i>
-                <span class="text">Dashboard</span>
+                <i class='bx bxs-home'></i>
+                <span class="text">Home</span>
             </a>
         </li>
         <li>
-            <a href="admin-booking">
+            <a href="booking">
                 <i class='bx bxs-book-alt'></i>
                 <span class="text">Booking</span>
             </a>
         </li>
-        <li class="active">
+         <li class="active">
             <a href="#">
-                <i class='bx bxs-map'></i>
-                <span class="text">Office Map</span>
-            </a>
-        </li>
-        <li>
-            <a href="{{route('use.index1')}}">
-                <i class='bx bxs-group'></i>
-                <span class="text">Manage Users</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="{{route('desks.index')}}">
-                <i class='bx bx-desktop'></i>
-                <span class="text">Manage Desk</span>
-            </a>
-        </li>
-         <li>
-            <a href="profile">
-                <i class='bx bx-user'></i>
+                <i class='bx bxs-user'></i>
                 <span class="text">Profile</span>
             </a>
         </li>
        
+       
+
+      
     </ul>
-    <ul class="side-menu" style="margin-top:150px">
+    <ul class="side-menu" style="margin-top:300px">
        
        
         <li> 
@@ -110,68 +94,46 @@
 
         <!-- MAIN -->
         <main>
-           <h1>Office Map</h1>
+          
+            
+           
+  <!-- <h1>Profile</h1>
 
-         <div class="table-data">
+   <p style="font-size:35px">Good Day! {{ Auth::user()->firstname }}</p> -->
+
+
+   
+            
+            <div class="table-data">
 
         
-                
                 <div class="order">
+                    <div style="display:flex">
+                        <img src="{{asset('assets/img/dummy.png')}}" alt="" style="height:200px;border-radius:100px">
+<div style="margin-left:50px;margin-top:50px">
+<div style="display:flex;gap:10px">
+      <p style="font-size:40px">{{ Auth::user()->firstname }}</p>
+                      <p style="font-size:40px">{{ Auth::user()->lastname }}</p>
+</div>
+                       
+                       <p style="font-size:18px"> {{ Auth::user()->email }}</p>
+                       <p style="font-size:15px">{{ Auth::user()->is_admin ? 'Admin' : 'Normal User' }}</p>
+                       </div>
+</div>
+              
                     <div class="head">
-                     
- 
-<div>
+                      
+                      
+                         
+                    
+                       
+                    </div>
+                    
+                  
+                </div>
 
-    <br>
-<div style="display:flex">
-<img src="{{ asset('assets/img/floor1.png') }}" alt="" style="height:380px"> 
-   
-    <img src="{{ asset('assets/img/floor2.png') }}" alt="" style="height:380px">
-</div>
-<div style="display:flex">
-       
-<img src="{{ asset('assets/img/floor3.png') }}" alt="" style="height:380px">
- <img src="{{ asset('assets/img/floor4.png') }}" alt="" style="height:380px">
-</div>
-
-
-
-
-</div>
-
-
-
-                
-
-                
-               
-        </main>
-        <!-- MAIN -->
-    </section>
-    <!-- CONTENT -->
-
-
- 
-   <script>
-    <script>
-    document.querySelector('#date_input').addEventListener('change', function() {
-        var selectedDate = this.value;
-        fetch('/update-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
-            },
-            body: JSON.stringify({ date: selectedDate })
-        })
-        .then(function(response) {
-            // Handle the response and update the relevant data on the page
-        });
-    });
-</script>
-
-    
-   </script>
+            </div>
+          
         </main>
         <!-- MAIN -->
     </section>

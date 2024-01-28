@@ -61,6 +61,12 @@
                 <span class="text">Manage Desk</span>
             </a>
         </li>
+         <li>
+            <a href="/admin/profile">
+                <i class='bx bx-user'></i>
+                <span class="text">Profile</span>
+            </a>
+        </li>
        
     </ul>
     <ul class="side-menu" style="margin-top:150px">
