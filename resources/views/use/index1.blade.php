@@ -173,8 +173,7 @@
     <td>
         <select style="height:30px">
             <option>Office Manager</option>
-            <option>Financial Clerks</option>
-             <option>Administrative Assistant</option>
+             <option>Frontend Developer</option>
              <option>Backend Developer</option>
             <option>UI/UX Designer</option>
              <option>Secretaries</option>
