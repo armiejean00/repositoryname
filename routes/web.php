@@ -112,5 +112,10 @@ Route::get('/bookings', [BookingController::class, 'index']);
 // });
 
 
-Route::get('/',[DeskController::class,'index']);
+Route::get('/desk',[DeskController::class,'index']);
 Route::get('desk/{id}',[DeskController::class,'update1']);
+
+
+Route::get('booking/{id}',[BookingController::class,'update']);
+
+Route::get('admin/admin-booking/{id}',[BookingController::class,'update']);

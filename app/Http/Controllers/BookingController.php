@@ -61,5 +61,20 @@ class BookingController extends Controller
    
 }
 
+public function update($bookingId){
+    $booking = Booking::find($bookingId);
+
+    if($booking){
+        if($booking->status){
+            $booking->status = 0;
+        }
+        else{
+            $booking->status =1;
+        }
+        $booking->save();
+    }
+    return back();
+}
+
 
 }
