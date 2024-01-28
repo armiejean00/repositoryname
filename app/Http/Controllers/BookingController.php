@@ -35,9 +35,10 @@ class BookingController extends Controller
         $date = $request->input('date');
 
         $isHotdeskReserved = Booking::where('desk_number', $deskNumber)->whereDate('date', $date)->exists();
+        $desk = Desk::where('desk_number', $deskNumber)->first();
+        $hotdeskUnavailable = $desk->isAvailable == 0 ? true : false;
 
-
-        if ($isHotdeskReserved) {
+        if ($isHotdeskReserved || $hotdeskUnavailable) {
             return redirect()->back()->with('error', 'Desk is not available.');
         } else {
             $existingBooking = Booking::where('user_id', auth()->id())
