@@ -10,6 +10,7 @@
 
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+       <link rel="shortcut icon" href="{{asset('assets/img/favicon.png')}}">
     <!-- My CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/homepage.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,7 +18,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>Homepage</title>
+    <title>ApexHubSpot</title>
 </head>
 
 <body>
@@ -107,19 +108,19 @@
           
         </nav>
         <!-- NAVBAR -->
-<p style="color: black; font-size: 24px;margin-top:20px;margin-left:20px ">Add User</p>
+<p style="color: black; font-size: 24px;margin-top:20px;margin-left:20px;font-family:calibri ">Add User</p>
 <br>
 <div >
     @if($errors->any())
     <ul style="list-style: none;">
         @foreach($errors->all() as $error)
-        <li style="color: red; font-size: 16px;">{{$error}}</li>
+        <li style="color:white;background-color:#FF4848;width:250px;padding:10px;border-radius:20px;margin-top:20px;margin-left:10px">{{$error}}</li>
         @endforeach
     </ul>
     @endif
 </div>
         <!-- MAIN -->
-        <div style="margin-top:30px;background-color:#fff;width:320px;height:310px;margin-left:20px;border-radius:20px">
+        <div style="margin-top:20px;background-color:#fff;width:420px;height:330px;margin-left:20px;border-radius:20px">
    
 
 
@@ -128,24 +129,24 @@
     @csrf
     @method('post')
     <div style="margin-top:20px">
-        <label style="font-size: 16px;">First Name</label>
-        <input type="text" name="firstname" placeholder="firstname" style="padding: 10px; margin: 10px; border: 1px solid gray; border-radius: 5px;"/>
+        <label style="font-size: 20px;font-family:calibri">First Name</label>
+        <input type="text" name="firstname" placeholder="firstname" style="padding: 12px; margin: 12px; border: 1px solid gray; border-radius: 5px;"/>
     </div>
     <div>
-        <label style="font-size: 16px;">Last Name</label>
-        <input type="text" name="lastname" placeholder="lastname" style="padding: 10px; margin: 10px; border: 1px solid gray; border-radius: 5px;" />
+        <label style="font-size: 20px;font-family:calibri">Last Name</label>
+        <input type="text" name="lastname" placeholder="lastname" style="padding: 12px; margin: 12px; border: 1px solid gray; border-radius: 5px;" />
     </div>
     <div>
-        <label style="font-size: 16px;">Email</label>
-        <input type="email" name="email" placeholder="email" style="padding: 10px; margin: 10px; border: 1px solid gray; border-radius: 5px;" />
+        <label style="font-size: 20px;font-family:calibri">Email</label>
+        <input type="email" name="email" placeholder="email" style="padding: 12px; margin: 12px; border: 1px solid gray; border-radius: 5px;" />
     </div>
     <div>
-        <label style="font-size: 16px;">Password</label>
-        <input type="password" name="password" placeholder="password" style="padding: 10px; margin: 10px; border: 1px solid gray; border-radius: 5px;" />
+        <label style="font-size: 20px;font-family:calibri">Password</label>
+        <input type="password" name="password" placeholder="password" style="padding: 12px; margin: 12px; border: 1px solid gray; border-radius: 5px;" />
     </div>
 
     <div>
-        <input type="submit" value="Add User" style="padding: 10px 20px; background-color: blue; color: white; border: none; border-radius: 5px;" />
+        <input type="submit" value="Add User" style="padding: 10px 20px; background-color: blue; color: white; border: none; border-radius: 5px;cursor:pointer" />
     </div>
 </form>
 </div>

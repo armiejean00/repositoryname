@@ -12,12 +12,13 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <!-- My CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/homepage.css')}}">
+       <link rel="shortcut icon" href="{{asset('assets/img/favicon.png')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>Homepage</title>
+    <title>ApexHubSpot</title>
 </head>
 
 <body>
@@ -119,18 +120,18 @@
     @endif
 </div>
 
-<form method="post" action="{{route('desks.store')}}" style="margin-top: 20px;background-color:#fff;height:200px;width:200px;margin-left:39px;border-radius:20px">
+<form method="post" action="{{route('desks.store')}}" style="margin-top: 20px;background-color:#fff;height:250px;width:250px;margin-left:39px;border-radius:20px">
     @csrf
     @method('post')
 
     <div style="margin-bottom: 40px;">
         
-        <input type="integer" name="desk_number" placeholder="Enter Desk Number" style="padding: 5px; border-radius: 5px;width:150px;height:50px;margin-top:50px;margin-left:25px" max="50">
+        <input type="integer" name="desk_number" placeholder="Enter Desk Number" style="padding: 5px; border-radius: 5px;width:200px;height:70px;margin-top:50px;margin-left:25px;font-size:20px" max="50">
 
     </div>
 
     <div>
-        <input type="submit" value="Add Desk" style="padding: 10px 20px; background-color: #4CAF50; color: white; border-radius: 5px; cursor: pointer;margin-left:40px;margin-top:10px">
+        <input type="submit" value="Add Desk" style="padding: 20px 30px; background-color: #4CAF50; color: white; border-radius: 5px; cursor: pointer;margin-left:60px;margin-top:10px">
     </div>
 </form>
 

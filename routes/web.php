@@ -68,7 +68,8 @@ Route::delete('/use/{use}/destroy',[UserController::class,'destroy'])->name('use
 Route::delete('/cancel/{booking}/destroy',[BookingController::class,'destroy'])->name('admin.destroy');
 
 
-
+Route::delete('/booking/{booking}/destroy',[BookingController::class,'destroy'])->name('booking.destroy');
+Route::get('/booking',[BookingController::class,'index1'])->name('booking.index1');
 
 Auth::routes();
 

@@ -10,6 +10,7 @@
 
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+       <link rel="shortcut icon" href="{{asset('assets/img/favicon.png')}}">
     <!-- My CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/homepage.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,7 +18,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>Homepage</title>
+    <title>ApexHubSpot</title>
 </head>
 
 <body>
@@ -111,18 +112,18 @@
         <!-- MAIN -->
         <main>
          
-            <ul class="box-info">
-                <li>
+            <!-- <ul class="box-info">
+                <!-- <li>
                     <i class='bx bxs-calendar-check'></i>
                     <span class="text">
                         <h3>100</h3>
                         <p>Total Bookings</p>
                     </span>
-                </li>
+                </li> -->
                 
 
-            </ul>
-
+            <!-- </ul> --> 
+ <h1>Recent Bookings</h1>
             <div class="table-data">
                 
                    
@@ -130,7 +131,7 @@
             <div class="table-data">
                 <div class="order">
                     <div class="head">
-                        <h3>Recent Bookings</h3>
+                       
 
                     </div>
                     <table>
@@ -141,7 +142,7 @@
                
                 <th>Desk Number</th>
                 <th>Status</th>
-                <th>Action</th>
+            
             </tr>
         </thead>
         <tbody>
@@ -151,15 +152,10 @@
                     <td>{{ $row->date }}</td>
                     
                     <td>Desk {{ $row->desk_number }}</td>
-                    <td style="color:{{ $row->status ? 'green' : 'blue'}};">{{ $row->status ? 'Accepted' : 'Cancelled' }}</td>
+                    <td style="color:{{ $row->status ? 'green' : 'red'}};">{{ $row->status ? 'Accepted' : 'Cancelled' }}</td>
 
 
-                     <td>
-        <form method="" action="">
-      
-        <input type="submit" value="Cancel" style="background-color: #ef7364; color: #fff; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;"/>
-    </form>
-    </td>
+                   
                 </tr>
             @endforeach
         </tbody>

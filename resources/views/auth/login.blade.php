@@ -4,8 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+             <div>
+                     <img src="{{asset('assets/img/logo.png')}}" alt="image" style="width:160px;margin-left:290px">
+                </div>
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">{{ __('Login Your Account Here!') }}</div>
 
                 <div class="card-body">
                     

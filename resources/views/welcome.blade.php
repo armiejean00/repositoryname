@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AHS</title>
+       <link rel="shortcut icon" href="{{asset('assets/img/favicon.png')}}">
+    <title>ApexHubSpot</title>
     
     <link rel="stylesheet" href="{{asset('assets/css/index.css')}}">
     
@@ -117,36 +118,72 @@ d. Then click "Book Now"
         </div>
         <div class="customers-container">
             <div class="box">
+                <div class="stars">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                     <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
               
                 <p>Project Manager</p>
                 <h2>Aurora Zafra Bactol</h2>
                <img src="{{asset('assets/img/aurora.jpg')}}" alt="">
             </div>
             <div class="box">
+                 <div class="stars">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                     <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
                 
                 <p>Lead Developer</p>
                 <h2>Harry Reyes</h2>
                 <img src="{{asset('assets/img/harry.gif')}}" alt="">
             </div>
             <div class="box">
+                 <div class="stars">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                     <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
               
                 <p>Co-Developer</p>
                 <h2>Joshua Allador</h2>
                 <img src="{{asset('assets/img/joshua.png')}}" alt="">
             </div>
             <div class="box">
+                 <div class="stars">
+                    <a href="https://www.facebook.com/armie.miranda18/" target="_blank"><i class='bx bxl-facebook'></i></a>
+
+                    <a href="https://github.com/armiejean00" target="_blank"><i class='bx bxl-github'></i></a>
+                     <a href="https://www.instagram.com/_t3rriee/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                </div>
                
                 <p>UI/UX Design Lead</p>
                 <h2>Armie Jean Miranda</h2>
                 <img src="{{asset('assets/img/armie.png')}}" alt="">
             </div>
             <div class="box">
+                 <div class="stars">
+                    <a href="https://www.facebook.com/Paula.Soleil.Jabinal" target="_blank"><i class='bx bxl-facebook'></i></a>
+
+                    <a href="https://github.com/Leisol" target="_blank"><i class='bx bxl-github'></i></a>
+                     <a href="https://www.instagram.com/p.soleil.s.j/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                </div>
                 
                 <p>Co-Developer</p>
                 <h2>Paula Soleil Jabinal</h2>
                 <img src="{{asset('assets/img/paula.jpg')}}" alt="">
             </div>
             <div class="box">
+                 <div class="stars">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                     <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
                
                 <p>Project Coordinator</p>
                 <h2>Jossa Marie Advincula</h2>

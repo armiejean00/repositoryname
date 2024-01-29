@@ -77,4 +77,20 @@ public function update($bookingId){
 }
 
 
+
+public function destroy(Booking $booking){
+    $booking->delete();
+
+    return redirect()->route('booking.index1')->with('success','Booking Cancelled Successfully');
+
+}
+
+
+public function index1()
+    {
+        $self_bookings = Booking::all()->where('user_id', auth()->id());
+
+        return view('booking')->with('bookings', $self_bookings);
+    }
+
 }

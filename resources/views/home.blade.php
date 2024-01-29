@@ -10,6 +10,7 @@
 
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+       <link rel="shortcut icon" href="{{asset('assets/img/favicon.png')}}">
     <!-- My CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/homepage.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,7 +18,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>Homepage</title>
+    <title>ApexHubSpot</title>
 </head>
 
 <body>
@@ -116,7 +117,7 @@
         @endforeach
     </select>
     
-    <button type="submit" style="background-color:darkblue;cursor:pointer;color:white;font-size:20px;border-radius:5px;margin-left:50px;padding:10px 20px">Book</button>
+    <button type="submit" style="background-color:darkblue;cursor:pointer;color:white;font-size:20px;border-radius:5px;margin-left:50px;padding:10px 20px">Book Now</button>
 
 
 </form>

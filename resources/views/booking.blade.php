@@ -10,6 +10,7 @@
 
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+       <link rel="shortcut icon" href="{{asset('assets/img/favicon.png')}}">
     <!-- My CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/homepage.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,7 +18,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>Homepage</title>
+    <title>ApexHubSpot</title>
 </head>
 
 <body>
@@ -98,6 +99,17 @@
             
            
   <h1>My Booking</h1>
+
+  <br>
+
+   <div>
+        @if(session()->has('success'))
+        <div style="color:white;background-color:#7EE27C;width:250px;padding:10px;border-radius:20px">
+            {{session('success')}}
+        </div>
+
+        @endif
+    </div>
             <div class="table-data">
                 <div class="order">
                     <div class="head">
@@ -126,11 +138,13 @@
             <td>{{$booking->date}}</td>
             <td>Desk {{$booking->desk_number}}</td>
           
-            <td style="color:{{$booking->status ? 'green' : 'red'}}">{{$booking->status ? 'Confirmed' : 'Cancelled'}}</td>
+            <td style="color:{{$booking->status ? 'green' : 'red'}}">{{$booking->status ? 'Accepted' : 'Cancelled'}}</td>
 
  
     <td>
-        <form method="" action="">
+        <form method="post" action="{{route('booking.destroy',$booking->id)}}">
+            @csrf
+            @method('DELETE')
       
         <input type="submit" value="Cancel" style="background-color: #ef7364; color: #fff; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;"/>
     </form>
