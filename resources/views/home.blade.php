@@ -109,7 +109,8 @@
     <label for="date" style="margin-left:40px">Date:</label>
    <input type="date" name="date" id="date" required style="height:40px">
 
-    
+
+   
     <label for="desk_number" style="margin-left:40px">Desk Number:</label>
     <select name="desk_number" id="desk_number" style="height:40px;width:100px">
         @foreach ($desks->sortBy('desk_number') as $desk)
@@ -121,7 +122,12 @@
 
 
 </form>
+
+
 <br>
+<p style="font-size:30px">Selected date: <span id="selected-date"></span></p>
+
+
  <div>
         @if(session()->has('success'))
         <div style="color:white;background-color:#7EE27C;width:250px;padding:10px;border-radius:20px">
@@ -155,6 +161,8 @@
 
         @endif
     </div>
+
+    
 
 
 
@@ -225,6 +233,10 @@
 
 
 
+document.getElementById("date").addEventListener("change", function() {
+    var selectedDate = document.getElementById("date").value;
+    document.getElementById("selected-date").textContent = selectedDate;
+});
 
 
    
