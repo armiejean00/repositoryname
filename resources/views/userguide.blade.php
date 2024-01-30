@@ -168,7 +168,7 @@
                         <p>You can find your booking in by clicking the sidebar button "Booking":<br>
                         a. On the website's sidebar, find "Booking".<br>
                          <img src="{{asset('assets/img/mybooking.png')}}" alt="" style="height:200px"> <br>
-                        b. Click this and you can see your bookings. <br>
+                        b. Click this and you can see your bookings. You can also cancel your booking.<br>
  <img src="{{asset('assets/img/history.png')}}" alt="" style="height:200px"> <br>
                     
 

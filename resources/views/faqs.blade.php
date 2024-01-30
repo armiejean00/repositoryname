@@ -181,14 +181,6 @@
                         </div>
             
                         <div class="faq-item" onclick="toggleAnswer(this)">
-                            <h3>How can I find an available hotdesk quickly?</h3>
-                            <p>Our hotdesking system provides real-time information on desk availability through our online platform
-                                or mobile app.
-                                Employees can easily view the available desks for a specific date and time, and select the one that
-                                suits them best. This ensures a hassle-free and efficient process in finding a suitable
-                                hotdesk quickly.</p>
-                        </div>
-                        <div class="faq-item" onclick="toggleAnswer(this)">
                             <h3>What if I encounter issues with my hotdesk reservation?</h3>
                             <p>If employees encounter any issues related to their hotdesk reservations, such as a desk being
                                 occupied despite the
