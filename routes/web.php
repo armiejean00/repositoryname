@@ -48,6 +48,15 @@ Route::get('/user-profile', function () {
     return view('user-profile');
 });
 
+Route::get('/faqs', function () {
+    return view('faqs');
+});
+
+
+Route::get('/userguide', function () {
+    return view('userguide');
+});
+
 
 
 Route::get('/desks',[DeskController::class,'index'])->name('desks.index');
@@ -120,3 +129,5 @@ Route::get('desk/{id}',[DeskController::class,'update1']);
 Route::get('booking/{id}',[BookingController::class,'update']);
 
 Route::get('admin/admin-booking/{id}',[BookingController::class,'update']);
+
+

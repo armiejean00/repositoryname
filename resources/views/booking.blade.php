@@ -49,12 +49,24 @@
                 <span class="text">Profile</span>
             </a>
         </li>
+         <li>
+            <a href="faqs">
+                <i class='bx bxs-component'></i>
+                <span class="text">FAQ's</span>
+            </a>
+        </li>
+          <li>
+            <a href="userguide">
+                <i class='bx bxs-cog'></i>
+                <span class="text">User Guide</span>
+            </a>
+        </li>
        
        
 
       
     </ul>
-    <ul class="side-menu" style="margin-top:300px">
+    <ul class="side-menu" style="margin-top:200px">
        
        
         <li> 

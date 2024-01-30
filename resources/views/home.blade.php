@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -49,12 +50,24 @@
                 <span class="text">Profile</span>
             </a>
         </li>
+          <li>
+            <a href="faqs">
+                <i class='bx bxs-component'></i>
+                <span class="text">FAQ's</span>
+            </a>
+        </li>
+          <li>
+            <a href="userguide">
+                <i class='bx bxs-cog'></i>
+                <span class="text">User Guide</span>
+            </a>
+        </li>
        
        
 
       
     </ul>
-    <ul class="side-menu" style="margin-top:300px">
+    <ul class="side-menu" style="margin-top:200px">
        
        
         <li> 
@@ -109,7 +122,8 @@
     <label for="date" style="margin-left:40px">Date:</label>
    <input type="date" name="date" id="date" required style="height:40px">
 
-    
+
+   
     <label for="desk_number" style="margin-left:40px">Desk Number:</label>
     <select name="desk_number" id="desk_number" style="height:40px;width:100px">
         @foreach ($desks->sortBy('desk_number') as $desk)
@@ -121,7 +135,11 @@
 
 
 </form>
+
+
 <br>
+
+
  <div>
         @if(session()->has('success'))
         <div style="color:white;background-color:#7EE27C;width:250px;padding:10px;border-radius:20px">
@@ -155,6 +173,8 @@
 
         @endif
     </div>
+
+    
 
 
 
@@ -225,6 +245,10 @@
 
 
 
+document.getElementById("date").addEventListener("change", function() {
+    var selectedDate = document.getElementById("date").value;
+    document.getElementById("selected-date").textContent = selectedDate;
+});
 
 
    

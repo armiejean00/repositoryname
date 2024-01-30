@@ -155,20 +155,24 @@
 
 
        <td>
-        <a href="desk/{{$desk->id}}" style="color:white;font-size:14px;padding:5px;border-radius:5px;background-color:{{ $desk->isAvailable ? 'green' : 'red'}}">
+        <p style="color:white;font-size:15px;padding:5px;border-radius:5px;color:{{ $desk->isAvailable ? 'green' : 'red'}};width:80px">
     {{$desk->isAvailable ? 'Available' : 'Disabled'}}
-    </a>
+    </p>
        </td>
 
 
 
 
-        <td>
+        <td style="display:flex">
             <form method="post" action="{{ route('desks.destroy', ['desks'=>$desk]) }}">
                 @csrf
                 @method('delete')
-                <input type="submit" value="Delete" style="background-color: #ef7364; color: #fff; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;"/>
+                <input type="submit" value="Delete" style="color:white;font-size:14px;padding:5px;border-radius:5px;background-color:red;cursor:pointer"/>
             </form>
+
+             <a href="desk/{{$desk->id}}" style="color:white;font-size:14px;padding:4px;margin-left:5px;border-radius:5px;background-color:{{ $desk->isAvailable ? 'orange' : 'green'}};border:1px solid black">
+    {{$desk->isAvailable ? 'Disable' : 'Enable'}}
+    </a>
         </td>
     </tr>
 @endforeach

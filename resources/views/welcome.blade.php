@@ -119,10 +119,10 @@ d. Then click "Book Now"
         <div class="customers-container">
             <div class="box">
                 <div class="stars">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                 
 
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                     <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/zafiedvwn" target="_blank"><i class='bx bxl-github'></i></a>
+                    
                 </div>
               
                 <p>Project Manager</p>
@@ -131,10 +131,10 @@ d. Then click "Book Now"
             </div>
             <div class="box">
                  <div class="stars">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.facebook.com/HMR36" target="_blank"><i class='bx bxl-facebook'></i></a>
 
                     <a href="#"><i class='bx bxl-github'></i></a>
-                     <a href="#"><i class='bx bxl-instagram'></i></a>
+                   
                 </div>
                 
                 <p>Lead Developer</p>
@@ -143,10 +143,10 @@ d. Then click "Book Now"
             </div>
             <div class="box">
                  <div class="stars">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.facebook.com/jshallador19" target="_blank"><i class='bx bxl-facebook'></i></a>
 
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                     <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/Josu119" target="_blank"><i class='bx bxl-github'></i></a>
+                  
                 </div>
               
                 <p>Co-Developer</p>
@@ -179,10 +179,10 @@ d. Then click "Book Now"
             </div>
             <div class="box">
                  <div class="stars">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.facebook.com/jossamarie.advincula" target="_blank"><i class='bx bxl-facebook'></i></a>
 
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                     <a href="#"><i class='bx bxl-instagram'></i></a>
+             
+                     <a href="https://www.instagram.com/josh_mariahh/" target="_blank"><i class='bx bxl-instagram'></i></a>
                 </div>
                
                 <p>Project Coordinator</p>
